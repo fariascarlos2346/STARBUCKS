@@ -11,26 +11,51 @@
     <title>Starbucks Carlos Full Stack</title>
   </head>
   <body>
+    <div class="circulo"></div>
+
     <img src="./images/logo.png" class="logo"/>
 
-    <div>
-      <h2>It´s not just Coffee <br> It´s <span>Starbucks</span> </h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore facilis
-        provident alias architecto eaque sint non tempora dolore iusto. Natus
-        rerum iure iste hic, pariatur molestias vel saepe aut facere?
-      </p>
-      <a href="https://github.com/fariascarlos2346" target="_blank">Mais projetos no meu Github</a>
+    <div class="conteudo">
+
+      <div class="caixa-texto">
+        <h2>It´s not just Coffee <br> It´s <span>Starbucks</span> </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore facilis
+          provident alias architecto eaque sint non tempora dolore iusto. Natus
+          rerum iure iste hic, pariatur molestias vel saepe aut facere?
+        </p>
+        <div class="link">
+          <a href="https://www.linkedin.com/in/carloshenrique-web/" target="_blank">Mais informações no meu Linkedin</a>
+        </div>
+ 
+      </div>
+  
+      <div class="caixa-imagem">
+        <img src="./images/img1.png" class="starbucks"/>
+      </div>
+
+    </div>
+    
+
+    <div class="menu">
+      <img src="./images/img1.png" class="botao-menu"onclick="trocaImagem('./images/img1.png'); trocarCor('#017743')"/>
+      <img src="./images/img2.png" class="botao-menu"onclick="trocaImagem('./images/img2.png'); trocarCor('#6495ed')"/>
+      <img src="./images/img3.png" class="botao-menu"onclick="trocaImagem('./images/img3.png');trocarCor('#d752b1')"/>
     </div>
 
-    <div>
-      <img src="./images/img2.png" class="starbucks"/>
-    </div>
-
-    <div>
-      <img src="./images/img1.png" class="botao-menu"/>
-      <img src="./images/img2.png" class="botao-menu"/>
-      <img src="./images/img3.png" class="botao-menu"/>
-    </div>
   </body>
+  <script>
+    
+    let imagem = document.querySelector(".starbucks")
+    let circulo = document.querySelector(".circulo")
+
+    function trocaImagem(endereco){
+      imagem.src = endereco
+    }
+
+    function trocarCor(cor){
+      circulo.style.background = cor
+    }
+
+  </script>
 </html>
